@@ -508,7 +508,7 @@ export default function SolmateSmsCode() {
       )}
 
       {/* Spacer pushes button to bottom */}
-      <div className="flex-1"></div>
+      {/* <div className="flex-1"></div> */}
 
       {/* Continue Button */}
       <button
