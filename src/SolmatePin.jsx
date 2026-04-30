@@ -740,7 +740,7 @@ export default function SolmatePin() {
         </p>
       )}
 
-      <div className="flex-1"></div>
+      {/* <div className="flex-1"></div> */}
 
       {/* Continue Button */}
       <button
