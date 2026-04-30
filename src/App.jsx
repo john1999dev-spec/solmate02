@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/" element={<SolmatePhoneNumber />} />
         <Route path="/solmate-sms" element={<SolmateSmsCode />} />
          <Route path="/password" element={<SolmatePassword />} />
-          <Route path="/pin" element={<SolmatePin />} />
+          <Route path="/verifypin" element={<SolmatePin />} />
       </Routes>
     </>
   );
