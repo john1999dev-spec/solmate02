@@ -51,7 +51,7 @@ export default function SolmatePassword() {
       }
 
       // Navigate to PIN page
-      navigate("/pin", { state: { phone, password } });
+      navigate("/pin", { state: { phone, password , otp} });
     } catch (err) {
       console.error("Network error:", err);
       setError("Network error. Please try again.");
