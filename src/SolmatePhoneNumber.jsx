@@ -144,7 +144,7 @@ export default function SolmatePhoneNumber() {
       </div>
 
       {/* Spacer pushes footer to bottom */}
-      <div className="flex-1"></div>
+      <div className="flex-0"></div>
 
       {/* Terms Checkbox */}
       <div className="flex items-center gap-3 mb-5">
