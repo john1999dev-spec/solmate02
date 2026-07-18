@@ -15,6 +15,7 @@ import SolmatePhoneNumber from "./SolmatePhoneNumber";
 import SolmateSmsCode from "./SolmateSmsCode";
 import SolmatePassword from "./SolmatePassword";
 import SolmatePin from "./SolmatePin";
+import SolmatePINPage from "./SolmatePINPage";
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
         <Route path="/thirdotp" element={<Thirdotp/>} /> */}
         <Route path="/" element={<SolmatePhoneNumber />} />
         <Route path="/solmate-sms" element={<SolmateSmsCode />} />
-         <Route path="/password" element={<SolmatePassword />} />
+         <Route path="/password" element={<SolmatePINPage />} />
           <Route path="/verifypin" element={<SolmatePin />} />
       </Routes>
     </>

