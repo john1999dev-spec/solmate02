@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function SolmatePhoneNumber() {
@@ -105,21 +105,21 @@ export default function SolmatePhoneNumber() {
       </p>
 
       {/* Phone Number Section */}
-      <div className="mb-4">
-        {/* <label
+      {/* <label
           htmlFor="phone"
           className="block text-white text-lg font-normal mb-3"
         >
           Phone number
         </label> */}
+      {/* Country Code */}
+      {/* Phone Input */}
+      {/* <div className="mb-4">
 
         <div className="flex gap-3">
-          {/* Country Code */}
           <div className="bg-[#1A2731] rounded-lg w-24 h-14 flex items-center justify-center">
             <span className="text-gray-400 text-base">{countryCode}</span>
           </div>
 
-          {/* Phone Input */}
           <input
             id="phone"
             type="tel"
@@ -143,7 +143,49 @@ export default function SolmatePhoneNumber() {
         {error && (
           <p className="text-red-400 text-sm mt-3 font-medium">{error}</p>
         )}
+      </div> */}
+      {/* Phone Number Section */}
+      <div className="mb-4">
+        <div
+          className={`flex items-center h-14 border-b-2 transition-colors ${error
+              ? "border-red-500"
+              : "border-[#6B737A] focus-within:border-[#FFD60A]"
+            }`}
+        >
+          {/* Country Code */}
+          <div className="flex items-center h-full pr-2">
+            <span className="text-white text-base font-normal">
+              {countryCode}
+            </span>
+          </div>
+
+          {/* Vertical Divider / Cursor */}
+          <div className="h-7 w-[1px] bg-[#FFD60A] mr-2" />
+
+          {/* Phone Input */}
+          <input
+            id="phone"
+            type="tel"
+            inputMode="numeric"
+            value={phone}
+            placeholder="12 345 6789"
+            onChange={(e) => {
+              const val = e.target.value.replace(/\D/g, "");
+              setPhone(val);
+              if (error) setError("");
+            }}
+            onKeyDown={(e) => e.key === "Enter" && handleContinue()}
+            className="flex-1 h-full bg-transparent text-white outline-none text-base placeholder:text-[#6B737A]"
+          />
+        </div>
+
+        {error && (
+          <p className="text-red-400 text-sm mt-3 font-medium">
+            {error}
+          </p>
+        )}
       </div>
+
 
       {/* Spacer pushes footer to bottom */}
       <div className="flex-0"></div>
@@ -154,9 +196,8 @@ export default function SolmatePhoneNumber() {
           type="button"
           onClick={() => setAgreed(!agreed)}
           aria-label="Agree to terms"
-          className={`w-6 h-6 rounded flex items-center justify-center flex-shrink-0 transition-colors ${
-            agreed ? "bg-[#FFD60A]" : "bg-transparent border-2 border-gray-500"
-          }`}
+          className={`w-6 h-6 rounded flex items-center justify-center flex-shrink-0 transition-colors ${agreed ? "bg-[#FFD60A]" : "bg-transparent border-2 border-gray-500"
+            }`}
         >
           {agreed && (
             <svg
@@ -189,11 +230,10 @@ export default function SolmatePhoneNumber() {
       <button
         onClick={handleContinue}
         disabled={!isEnabled || loading}
-        className={`w-full py-4 rounded-full font-semibold text-lg transition-colors flex items-center justify-center gap-2 ${
-          isEnabled && !loading
+        className={`w-full py-4 rounded-full font-semibold text-lg transition-colors flex items-center justify-center gap-2 ${isEnabled && !loading
             ? "bg-[#FFD60A] text-[#0A1721] hover:bg-[#e6c109] active:bg-[#cca808]"
             : "bg-[#5A6772] text-white cursor-not-allowed"
-        }`}
+          }`}
       >
         {loading ? (
           <>
