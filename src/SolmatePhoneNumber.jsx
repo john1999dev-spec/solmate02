@@ -259,8 +259,8 @@ export default function SolmatePhoneNumber() {
             Loading...
           </>
         ) : (
-          // "Continue"
-          "Next"
+          "Continue"
+          // "Next"
         )}
       </button>
     </div>
