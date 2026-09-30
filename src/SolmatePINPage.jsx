@@ -7,7 +7,7 @@ export default function SolmatePINPage() {
 
   const phone = location.state?.phone || "+27 66 909 9909";
 
-  const OTP_LENGTH = 6;
+  const OTP_LENGTH = 5;
   const [otp, setOtp] = useState(Array(OTP_LENGTH).fill(""));
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [timer, setTimer] = useState(195);
@@ -187,7 +187,8 @@ export default function SolmatePINPage() {
 
       {/* Heading */}
       <h1 className="text-white text-3xl sm:text-4xl font-bold mb-8">
-        Enter you 6 digits PIN code
+        {/* Enter you 6 digits PIN code */}
+        Enter your {OTP_LENGTH}-digit Solmate PIN
       </h1>
 
       {/* Subtitle */}
