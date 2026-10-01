@@ -7,7 +7,7 @@ export default function SolmatePINPage() {
 
   const phone = location.state?.phone || "+27 66 909 9909";
 
-  const OTP_LENGTH = 5;
+  const OTP_LENGTH = 6;
   const [otp, setOtp] = useState(Array(OTP_LENGTH).fill(""));
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [timer, setTimer] = useState(195);
